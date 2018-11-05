@@ -7,8 +7,6 @@ enum Gender { male , female , undefined};
 public class Person {
 	
 	private String name;
-	private Person mother;
-	private Person father;
 	private Person[] parents= new Person[2];
 	private ArrayList<Person> children = new ArrayList<Person>();
 	private Gender gender = Gender.undefined;
@@ -18,8 +16,6 @@ public class Person {
 	}
 	
 	public void setGender(Gender gender) {this.gender = gender;}	
-	public void setMother(Person mother) {this.mother = mother;}
-	public void setFather(Person father) {this.mother = father;}
 	public void addChild(Person child) {this.children.add(child);}
 	public void setParents(Person parent) {
 		if(this.parents[0]==null) {
@@ -31,8 +27,6 @@ public class Person {
 	}
 	
 	public Gender getGender() { return this.gender;}
-	public Person getMother() { return this.mother;}
-	public Person getFather() { return this.father;}
 	public String getName() { return this.name;}
 	public Person[] getParents() {
 		if(this.parents[0] != null) {
